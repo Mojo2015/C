@@ -1,0 +1,1 @@
+Any file folders with the label "COMPILED" have been built to a windows executable and can be downloaded and run by anybody.
