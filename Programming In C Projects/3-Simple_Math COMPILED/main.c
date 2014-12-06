@@ -16,3 +16,5 @@ int main(void)
 	getch(); /* this keeps the program from closing as soon as it opens*/
 	return 0;
 }
+
+//PLEASE NOTE THE USE OF getch(); when compiling the program for windows it WILL CLOSE WITHOUT SOME KIND OF PAUSE COMMAND!!!
