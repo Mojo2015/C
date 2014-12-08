@@ -1,0 +1,155 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset0 Arial;}{\f2\fmodern\fcharset0 Courier;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\qc\lang9\ul\b\f0\fs56 Program Looping\par
+\par
+\pard\sa200\sl276\slmult1\ulnone\b0\fs24 One of the fundamental properties of a computer is its ability to repetitively execute a set of statements. These LOOPING capabilities enable you to develop concise programs containing repetitive processes that could otherwise require millions of program statements to perform. The C programming language contains three different statements for program looping: FOR, WHILE, DO\par
+\par
+\b The \b0\i for\b\i0  Statement\b0\par
+\tab The general format for the for statement:\par
+\tab\tab for ( init_expression; loop_condition; loop_expression)\par
+\tab\tab program statement\par
+init_expression - used to set the initial values BEFORE the loop begins. See project file looping.c "n = 1" is used, this sets the initial value of n to 1.\par
+\par
+loop_condition are the conditions that are necessary for the for loop to continue. The looping will continue as long as this condition is satisfied. In looping.c you will see I used the RELATIONAL EXPRESSION "n <= 200"; this means the for loop will continue running until n = 200. In other words, every time the for loop runs it is checking to see if the condition is TRUE(satisfied) or FALSE(not satisfied). It is TRUE in looping.c if n <= 200, if n = 200 it is FALSE and the loop will stop. Note <= 200 is the same as <201\par
+\tab\tab Relational Expressions in C: (Remember these have lower precedence than all arithmetic operators)\par
+\tab\tab == Equal To\par
+\tab\tab != Not Equal To\par
+\tab\tab <  Less Than\par
+\tab\tab <= Less Than or Equal To\par
+\tab\tab >  Greater Than\par
+\tab\tab >= Greater Than or Equal To\par
+\par
+When the loop_condition is no longer satisfied, execution of the program will continue with the next program statement immediately following the for loop. In looping.c, the program continues with our printf statement and prints the final value of TriangularNumber\par
+\par
+loop_expression is the final component of the foor statement that is evaluated each time AFTER the body of the loop is executed. In looping.c it is set to n = n + 1, therefore the value of n is incremented (increased) by 1 after each time it's value has been added into the value of triangularNumber and ranges in value from 1 to 201. Note that when N reaches 201 it will not be added to triangularNumber (the program STATEMENT) because the loop then terminates since the loop_condition (n >= 200) is no longer met\par
+\par
+Summarization of how the for loop works:\par
+\pard\li1440\f1\fs20 1. The initial expression is evaluated first.This expression usually sets a variable that will be used inside the loop, generally referred to as an \i index \i0 variable, to some initial value such as \fs16 0 \fs20 or \fs16 1\fs20 .\par
+\par
+2. The looping condition is evaluated. If the condition is not satisfied (the expression s FALSE), the loop is immediately terminated. Execution continues with the program statement that immediately follows the loop.\par
+\par
+3. The program statement that constitutes the body of the loop is executed.\par
+\par
+4. The looping expression is evaluated.This expression is generally used to change\par
+the value of the index variable, frequently by adding 1 to it or subtracting 1\par
+from it.\par
+\par
+\pard\li1440\sa200\sl276\slmult1 5. Return to step 2.\par
+\par
+\pard\sa200\sl276\slmult1\f0\fs24 **NOTE** - If using more than one program statement within the loop, you must encase the program statements within curly braces \{ BLOCK of statements\}, see project forlooptable.c to see an example of the same triangular number calculation, this time printing out a table that requires an output from every pass of the loop.\par
+\par
+In forlooptable.c you will notice the use of += n instead of n = n + 1 or n += 1, this is known as the INCREMENT operator\par
+\tab ++n = add one to the operand (n) - INCREMENT\par
+\tab --beans = subtract one from the operand (beans) - DECREMENT\par
+\tab\tab *Note that -- and ++ can be used either before OR after the operand.\par
+\par
+\par
+\b\fs28 OBTAINING USER INPUT\par
+\b0\fs24\tab There are a few functions for obtaining input from users, for now we will use scanf to obtain an integer value from our user. scanf is very similar in concept to the printf routine, where the printf routine is used to display values already stored in the terminal, the scanf routine enables you to TYPE values into the program. \par
+\tab\par
+\tab *PLEASE REFER TO: scanf.c for an example with notes*\par
+\par
+\par
+\b Nested for Loops - see nestforloop.c **\par
+\b0\tab A nested for loop is esentially a for loop contained within a for loop. Ex:\par
+\tab for ( init_expression; loop_condition; loop_expression )\par
+\tab\tab do this as long as above condition is TRUE\par
+\tab\tab\tab for ( init_expression; loop_condition; loop_expression)\par
+\tab\tab\tab\tab do this as long as both above statements are TRUE\par
+\tab Nesting can continue up to 127 levels in C!\par
+\par
+\b Multiple Expressions\par
+\b0\tab You can include multiple expressions in any of the fields of the for loop, provided that they are separated by commas: Ex.\par
+\tab for (i = 0, j = 0; i < 10; ++i , j = j + 10)\b\par
+\par
+Omitting Fields\par
+\b0\tab Just as the need may arise to include more than one expression, the need may arise to omit one expression in a particular field of the for statement. This can be done by simply omitting the field from the statement but replacing it with a semi-colon. The most common reason for this is when there is no initial expression that needs to be evaluated. ex:\par
+\tab for ( ; j != 100; ++j)\par
+\tab\tab This would be used if j already had a specific value set before the loop was \par
+\tab\tab entered.\par
+\tab A for loop with it's looping_condition field ommitted effectively sets up an infinite \par
+\tab loop (a loop that will repeat forever).\b\par
+ \par
+\b0\tab\b\par
+\par
+Declaring Variables\par
+\tab\b0 You can also declare variables as part of your intial expression inside a for loop. This is done using the normal ways variables are definied. ex:\par
+\tab for (int counter = 1; counter <= 5; ++ counter) \par
+\tab\tab // counter is declared and assigned a value within the for statement.\par
+\tab\tab note that doing so creates a LOCAL VARIABLE within the for loop, you will not be able to call on it outside of the for loop.\par
+\par
+\b The \b0\i while\b\i0  Statement\par
+\tab\b0 Ex:\par
+\tab\tab while ( expression )\par
+\tab\tab\tab program statement\par
+The expression specified inside the parenthesis is evaluated. If the result of the value is TRUE, the program statement that immediately follows is executed. After execution of the statement(s), the expression is evaluated again, if the result is true - the program statement is once again executed. This will be repeated until the expression becomes FALSE. The program will then continue beyond the while program statement block.\par
+\tab -For statements can be substitued for while statements. EX:\par
+\pard\tab\tab\f2\fs16 for ( \i init_expression\i0 ; \i loop_condition\i0 ; \i loop_expression \i0 )\par
+\pard\sa200\sl276\slmult1\i\tab\tab\tab program statement\par
+\par
+\pard\tab\tab init_expression\i0 ;\par
+\tab\tab\tab while ( \i loop_condition \i0 ) \{\par
+\i\tab\tab\tab program statement\par
+\tab\tab\tab loop_expression;\par
+\pard\sa200\sl276\slmult1\i0\tab\tab\tab\}\par
+\f0\fs24 Both of the above examples will do essentially the same exact thing. In general, a loop that is to be executed a PREDETERMINED number of times is a prime candidate for a for loop, or if the intial expression, looping expression, and looping condition all involve the same variable a for loop is optimal.\par
+\line Using while to compute gcd (Greatest Common Divisor)\par
+\tab ex. the gcd of 10 and 15 = 5 (the largest number that evenly divides both 15 and 10)\par
+\par
+Like all mathematical problems, we need to create an algorithm that can be used:\par
+\tab Problem\tab Find the greatest common divisor of two nonnegative integers u \par
+\tab\tab\tab\tab and v\par
+\tab Step 1:\tab\tab If v equals 0, then you are done and the gcd is equal to u\par
+\tab Step 2:\tab\tab Calculate temp = u % v, u = v, v = temp, and go back to step 1\par
+Try to think this way for every problem raised that needs to be computer. See gcd.c for a working program solving this problem based on user input of two integers.\par
+\par
+Problem: Create a program that takes an integer input by a user, reverses it and displays the results (4321 becomes 1234, etc.). \par
+\tab -To create algorithms, think of the way you would solve this problem on your own\par
+\tab -"By counting the numbers backwards"\par
+\tab - C can do this by isolating (extracting) each digit of the number beginning with the rightmost digit. **You can find the last digit of any number by dividing it by ten, the remainder is equal to the last digit** Ex:\par
+\tab\tab 1234 % 10 = \b 4\tab\b0\tab\tab 1234 / 10 = 123   (no decimals with ints)\par
+\tab\tab   123 % 10 = \b 3\b0\tab\tab\tab   123 / 10 =   12\par
+\tab\tab     12 % 10 = \b 2\b0\tab\tab\tab     12 / 10 =      1\par
+\tab\tab       1 % 10 = \b 1\b0\tab\tab\tab       1 / 10 =       0\par
+We know we are done when the digit / 10 = 0, so we can run our while loop until our variable = 0 ex: while (number != 0)\par
+\tab step 1: if variable = 0; stop\par
+\tab step 2: variable % 10 = right_digit\par
+\tab step 3: variable / 10 = variable, repeat\par
+**see whilerev.c to see this in action** \par
+\par
+\b The \i do\i0  Statement\par
+\tab\b0 -while and for both make a test of the conditions before the loop is executed, sometimes in programming it may be desirable to have the test come at the END of the loop rather than the beginning. The syntax for the do statement is as follows:\par
+\tab do\par
+\tab\tab program statement\par
+\tab while ( loop_expression );\par
+Execution proceeds as follows: The program statement is executed first, next the while statement loop_expression is evaluated, if it is TRUE the loop will continue with program statement.  *The do statement is simply a transposition of the while statement, with the looping conditions placed at the end of the loo rather than the beginning.\par
+\par
+\b The \i break\i0  Statement\par
+\tab\b0 Sometimes when executing a loop, it becomes desirable to leave the loop as soon as a certain condition occurs (i.e. you detect an error condition or reach end of your data prematurely). The break statement can be used for this purpose. break statement will cause the program to immediately exit from the loop whether its a for, while, or do loop. Execution of the loop stops but the program will continue with the next statement after the loop. If break is used within a nested loop; only the innermost loop containing break is executed and terminated. usage:\par
+\tab\tab\tab\tab\tab break;\b\par
+The \i continue\i0  Statement\par
+\tab\b0 The continue statement is similar to break except it doesn't cause the loop to terminate, rather, the statement causes the loop to continue. The continue statement is most often used to bypass a group of statements inside a loop based upon some condition, but to otherwise continue execution of the loop. usage:\par
+\tab\tab\tab\tab\tab continue;\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\par
+\b\par
+\b0\par
+\par
+\f1\fs20\par
+\pard\li1440\sa200\sl276\slmult1\par
+\pard\sa200\sl276\slmult1\f0\fs24  \f1\fs20\par
+\pard\li1440\sa200\sl276\slmult1\f0\fs24\par
+\pard\sa200\sl276\slmult1\par
+\par
+\par
+\par
+\par
+\par
+\fs22\par
+}
+ 
