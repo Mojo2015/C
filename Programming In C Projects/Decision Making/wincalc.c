@@ -32,15 +32,18 @@ Exit Program    E, e
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
-// #include <Windows.h> **WINDOWS ONLY**
+#include <Windows.h> //**WINDOWS ONLY**
 #include <stdbool.h>
-#include <locale.h>	// Added to support printout of commas with numbers 
+//#include <locale.h>	// Added to support printout of commas with numbers  (not working in windows)
+
 
 int main(void)
 
 
 {
-	setlocale(LC_NUMERIC, "");	// must set your locale type with locale.h always use LC_NUMERIC for alpha numeric characters.
+	HANDLE hstdout; 
+	hstdout = GetStdHandle(STD_OUTPUT_HANDLE);
+	//setlocale(LC_NUMERIC, "");	// must set your locale type with locale.h always use LC_NUMERIC for alpha numeric characters.
 	system("mode 90,75");   //Set mode to ensure window does not exceed buffer size
 	//SMALL_RECT WinRect = { 0, 0, 90, 75 };   //New dimensions for window in 8x12 pixel chars
 	//SMALL_RECT* WinSize = &WinRect;
@@ -48,21 +51,27 @@ int main(void)
 
 	float number, ans = 0;	// declaring our integers NUMBER and ANSWER
 	char accumulator;	// declaring our char accumulator
-
+	SetConsoleTextAttribute(hstdout, FOREGROUND_RED);
 	printf("******************************************************************************************		\n");
 	printf("			   CALCULATOR BY SERIOUS DON V. 0.2.2 BETA			   	\n");
 	printf("******************************************************************************************		\n");
+	
+	SetConsoleTextAttribute(hstdout, FOREGROUND_INTENSITY | 15);
 	printf("   ___                      _                                       ___                   		\n");
 	printf("  / __|    ___      _ _    (_)     ___    _  _     ___      o O O  |   \\    ___    _ _			\n");
 	printf("  \\__ \\   / -_)    |  _|   | |    / _ \\  | +| |   (_-<     o       | |) |  / _ \\  |   \\   	\n");
 	printf("  |___/   \\___|   _|_|_   _|_|_   \\___/   \\_,_|   /__/_   MoJ0[O]  |___/   \\___/  |_||_|  	\n");
 	printf("_|*****|_|*****|_|*****|_|*****|_|*****|_|*****|_|*****| {======|_|*****|_|*****|_|*****|		\n");
 	printf("* -0-0- * -0-0- * -0-0- * -0-0- * -0-0- * -0-0- * -0-0- ./o--000 * -0-0- * -0-0- * -0-0-  		\n\n");
+	SetConsoleTextAttribute(hstdout, 15);
 	printf("******************************************************************************************		\n");
 	printf("					CALCULATOR					   	\n");
 	printf("	 Begin by typing S to set your first number followed by a digit (\"S 500\")				 	\n");
 	printf("      [ C Clear ]  [ + Add ] [ - Subtract ] [ * Multiply ] [ / Divide ][ R Reset ]				\n\n");
+	printf("******************************************************************************************		\n");
+	SetConsoleTextAttribute(hstdout, FOREGROUND_RED);
 	printf("		        Enter your OPERATOR followed by your NUMBER										\n\n");
+	SetConsoleTextAttribute(hstdout, FOREGROUND_INTENSITY | 15);
 	scanf(" %c %f", &accumulator, &number);	// first input from user setting number and accumulator
 
 
@@ -71,7 +80,9 @@ int main(void)
 	if (accumulator == 'S' || accumulator == 's')
 	{
 		ans = number;		// resets the accumulated balance in the variable ans to whatever was typed in
-		printf("\nAccumulator set to %'.2f\n\n", number);	// Accumulator is reset
+		SetConsoleTextAttribute(hstdout, 12);
+		printf("\n	Accumulator set to %.2f\n\n", number);	// Accumulator is reset
+		SetConsoleTextAttribute(hstdout, 15);
 		printf("ANS ");
 		scanf("\t\t\t %c %f", &accumulator, &number);
 
@@ -79,24 +90,30 @@ int main(void)
 
 	else if (accumulator == '+')
 	{
-		printf("\n%'.2f + %'.2f = %'.2f\n\n", ans, number, ans + number); // note the apostraphe ' following each % symbol, this is calling our locale to print commas.
+		SetConsoleTextAttribute(hstdout, 12);
+		printf("\n	%.2f + %.2f = %.2f\n\n", ans, number, ans + number); // note the apostraphe ' following each % symbol, this is calling our locale to print commas.
 		ans = ans + number;
+		SetConsoleTextAttribute(hstdout, 15);
 		printf("ANS ");
 		scanf(" %c %f", &accumulator, &number);
 	}
 
 	else if (accumulator == '-')
 	{
-		printf("\n%'.2f - %'.2f = %'.2f\n\n", ans, number, ans - number);
+		SetConsoleTextAttribute(hstdout, 12);
+		printf("\n	%.2f - %.2f = %.2f\n\n", ans, number, ans - number);
 		ans = ans - number;
+		SetConsoleTextAttribute(hstdout, 15);
 		printf("ANS ");
 		scanf(" %c %f", &accumulator, &number);
 	}
 
 	else if (accumulator == '*' || accumulator == 'x' || accumulator == 'X')
 	{
-		printf("\n%'.2f x %'.2f = %'.2f\n\n", ans, number, ans * number);
+		SetConsoleTextAttribute(hstdout, 12);
+		printf("\n	%.2f x %.2f = %.2f\n\n", ans, number, ans * number);
 		ans = ans * number;
+		SetConsoleTextAttribute(hstdout, 15);
 		printf("ANS ");
 		scanf(" %c %f", &accumulator, &number);
 	}
@@ -105,14 +122,18 @@ int main(void)
 
 	if (number == 0 || ans == 0)
 	{
+		SetConsoleTextAttribute(hstdout, 6);
 		printf("\nError: Can not divide by zero\n\n");
+		SetConsoleTextAttribute(hstdout, 15);
 		printf("ANS ");
 		scanf(" %c %f", &accumulator, &number);
 	}
 	else
 	{
-		printf("\n%'.2f / %'.2f = %'.2f\n\n", ans, number, ans / number);
+		SetConsoleTextAttribute(hstdout, 12);
+		printf("\n%.2f / %.2f = %.2f\n\n", ans, number, ans / number);
 		ans = ans / number;
+		SetConsoleTextAttribute(hstdout, 15);
 		printf("ANS ");
 		scanf(" %c %f", &accumulator, &number);
 	}
@@ -127,6 +148,7 @@ int main(void)
 	else
 	{
 		printf("\nNot a valid entry\n\n");
+		SetConsoleTextAttribute(hstdout, 15);
 		printf("ANS ");
 		scanf("%c %f", &accumulator, &number);
 	}
