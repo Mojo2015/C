@@ -32,24 +32,25 @@ Exit Program    E, e
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
-#include <Windows.h>
+// #include <Windows.h> **WINDOWS ONLY**
 #include <stdbool.h>
+#include <locale.h>	// Added to support printout of commas with numbers 
 
 int main(void)
 
 
 {
-
+	setlocale(LC_NUMERIC, "");	// must set your locale type with locale.h always use LC_NUMERIC for alpha numeric characters.
 	system("mode 90,75");   //Set mode to ensure window does not exceed buffer size
-	SMALL_RECT WinRect = { 0, 0, 90, 75 };   //New dimensions for window in 8x12 pixel chars
-	SMALL_RECT* WinSize = &WinRect;
-	SetConsoleWindowInfo(GetStdHandle(STD_OUTPUT_HANDLE), true, WinSize);   //Set new size for window
+	//SMALL_RECT WinRect = { 0, 0, 90, 75 };   //New dimensions for window in 8x12 pixel chars
+	//SMALL_RECT* WinSize = &WinRect;
+	//SetConsoleWindowInfo(GetStdHandle(STD_OUTPUT_HANDLE), true, WinSize);   //Set new size for window
 
 	float number, ans = 0;	// declaring our integers NUMBER and ANSWER
 	char accumulator;	// declaring our char accumulator
 
 	printf("******************************************************************************************		\n");
-	printf("			   CALCULATOR BY SERIOUS DON V. 0.2.1 BETA			   	\n");
+	printf("			   CALCULATOR BY SERIOUS DON V. 0.2.2 BETA			   	\n");
 	printf("******************************************************************************************		\n");
 	printf("   ___                      _                                       ___                   		\n");
 	printf("  / __|    ___      _ _    (_)     ___    _  _     ___      o O O  |   \\    ___    _ _			\n");
@@ -69,8 +70,8 @@ int main(void)
 
 	if (accumulator == 'S' || accumulator == 's')
 	{
-		ans = ans + number;		// resets the accumulated balance in the variable ans to whatever was typed in
-		printf("\nAccumulator set to %g\n\n", number);	// Accumulator is reset
+		ans = number;		// resets the accumulated balance in the variable ans to whatever was typed in
+		printf("\nAccumulator set to %'.2f\n\n", number);	// Accumulator is reset
 		printf("ANS ");
 		scanf("\t\t\t %c %f", &accumulator, &number);
 
@@ -78,7 +79,7 @@ int main(void)
 
 	else if (accumulator == '+')
 	{
-		printf("\n%g + %g = %g\n\n", ans, number, ans + number);
+		printf("\n%'.2f + %'.2f = %'.2f\n\n", ans, number, ans + number); // note the apostraphe ' following each % symbol, this is calling our locale to print commas.
 		ans = ans + number;
 		printf("ANS ");
 		scanf(" %c %f", &accumulator, &number);
@@ -86,7 +87,7 @@ int main(void)
 
 	else if (accumulator == '-')
 	{
-		printf("\n%g - %g = %g\n\n", ans, number, ans - number);
+		printf("\n%'.2f - %'.2f = %'.2f\n\n", ans, number, ans - number);
 		ans = ans - number;
 		printf("ANS ");
 		scanf(" %c %f", &accumulator, &number);
@@ -94,7 +95,7 @@ int main(void)
 
 	else if (accumulator == '*' || accumulator == 'x' || accumulator == 'X')
 	{
-		printf("\n%g x %g = %g\n\n", ans, number, ans * number);
+		printf("\n%'.2f x %'.2f = %'.2f\n\n", ans, number, ans * number);
 		ans = ans * number;
 		printf("ANS ");
 		scanf(" %c %f", &accumulator, &number);
@@ -110,7 +111,7 @@ int main(void)
 	}
 	else
 	{
-		printf("\n%g / %g = %g\n\n", ans, number, ans / number);
+		printf("\n%'.2f / %'.2f = %'.2f\n\n", ans, number, ans / number);
 		ans = ans / number;
 		printf("ANS ");
 		scanf(" %c %f", &accumulator, &number);
@@ -146,3 +147,5 @@ Things to learn: How to add a help menu which will clear from the terminal when 
 Otherwise this calculator is fully functional!
 
 */
+
+//0.2.2 Switched back to floating point numbers because after 1,000,000 they were being converted to scientific notation. Added commas to printouts for easier reading.
