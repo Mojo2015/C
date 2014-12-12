@@ -1,0 +1,213 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\qc\lang9\ul\b\f0\fs96 Making Decisions\par
+\ulnone\fs32 1. The If statement\par
+2. The if else construct\par
+3. The else if statement\par
+4. The switch statement\b0\fs24\par
+\par
+\pard\sa200\sl276\slmult1\tab In the section on Program Looping we learned that one of the fundamental properties of a computer is it's capability to repetitively execute a sequence of instructions. Another fundamental property lies in its capability to make decisions. Without such decisions we could end up with programs that get stuck in an infinite loop.\par
+\tab The C programming language also provides several other decision making constructs:\par
+\tab\tab The if statement\par
+\tab\tab The switch statement\par
+\tab\tab The conditional operator\par
+\par
+\b The \i if\i0  Statement\par
+\b0\tab The C programming language provides a general decision making capaibilty in the form of a language construct known as the if statement. The format:\par
+\tab\tab if (expression)\par
+\tab\tab\tab program statement;\par
+\par
+More understandably:\par
+\tab\tab if ( it is not raining)\par
+\tab\tab\tab I will go swimming;\par
+\par
+The if statement is used to stipulate execution of a program statement (or statements if enclosed in curly braces) based upon the specified conditions.\par
+\par
+\tab if ( count > COUNT_LIMIT )\par
+\tab\tab printf ("Count limit exceeded\\n");\par
+\par
+The printf statement is executed only if the value of count is greater than the value of COUNT_LIMIT; otherwise it is ignored.\par
+\par
+\tab **See 6.1-Absolute_Value.c for an example of displaying positive values, this program uses an if statement to determine if the number is negative, if it is it reverses it (-value), otherwise if the number is positive the if statement does not execute (since positive numbers must remain positive)\par
+\par
+\tab **See 6.2-Average_Grade for a more advanced use running within a for loop to calculate average grades and failure count. Also an example of converting integers to a float for aesthetic output.\par
+\par
+\b The \i if-else \i0 Construct\par
+\b0\tab Consider determining whether a number is even or odd, a computer would not check the last digit looking for 0,2,4,6,8 like a human would. Instead, the best alternative is to check if the number is divisible by 2. Optimally, using the modulous % symbol, an even number would return a remainder of zero.\par
+\tab "If the remainder after division by 2 is zero, it is even; else it is odd."\par
+***See program 6.3-if_else for an example of even and odd determination.\par
+\tab Note: If else is simple, when one statement is true, the other fails. Only one will run. You can also nest if and else statements.\par
+\tab Usage:\par
+\tab if (expression)\par
+\tab\tab program statement 1;\par
+\tab else\par
+\tab\tab program statement 2'\par
+\par
+If-else is actually just an extension of the general format of the if statement. If the result of the evaluation of expression is TRUE, program statement 1 which immediately followed is executed. Otherwise (else) program statement 2 is executed. Both statements will never be executed.\par
+\par
+\b Compound Relational Tests\par
+\b0\tab The if statements so far set up simple relational tests between two numbers.  We can go beyond that.\par
+\tab Compound Relational Test - simply one or more simply relational tests joined by either the logical AND or the logical OR operator. These operators are represented by the character pairs:\par
+\tab && = AND\par
+\tab ||   = OR \par
+\tab\par
+ex: AND\par
+\tab if ( grade >= 70 && grade <= 79)\par
+\tab\tab ++grades_70_to_79;\par
+\tab -grades_70_to_79 will only be incremented if the grade input is both greater than or equal to 70 AND less than or equal to 79 (70-79)\par
+\par
+ex: OR\par
+\tab if ( index < 0 || index > 99 )\par
+\tab\tab printf ("Error - index out of range\\n");\par
+\tab -The printf statement will execute if index is less than 0 OR greater than 99 (but nowhere in between).\par
+\par
+The compound operators can be used to form extremely complex expressions in C. This gives the programmer ultimate flexibility in forming expressions. However remember that simpler expressions are always easier to read and debug.\par
+\par
+Example program: Calculating leap year\par
+\tab -Leap years are years that are divisible by 4, but also a year that is divisible by 100 is NOT a leap year unless it is also divisible by 400.\par
+\tab How would this be done? We would need to compute the remainders of the year after division by 4, 100, and 400, and assign these values to appropriately named variables; then these remainders could be tested to determine if the desired criteria for a leap year are met.\par
+\tab "A year is a leap year if it is (evenly divisibly by 4 and not by 100) or if it is evenly divisible by 400"\par
+\par
+\b Nested \i if\i0  Statements\par
+\tab\b0 In the general format of the if statement, remember that if the result of evaluating the expression inside the parenthesis is TRUE, the statement that immediately follows is executred. It is perfectly valid that this program statement can be another if statement. Ex:\par
+\tab if ( gameIsOver ==0 )\par
+\tab\tab if ( PlayerToMove == YOU )\par
+\tab\tab\tab printf ("Your Move\\n")\par
+\tab Not this would also work in a compound if statement \par
+\tab\tab (if ( gameIsOver == 0 && PlayerToMove == YOU))\par
+\par
+However there are situations where it is more logical and necessary:\par
+\tab if (gameIsOver == 0)\par
+\tab\tab if ( playerToMove == YOU)\par
+\tab\tab\tab printf ("Your Move\\n");\par
+\tab\tab else\par
+\tab\tab\tab printf ("My Move\\n");\par
+\tab -If game over = 0, one of the two in the nested if statement will execute, if game over != 0, neither will execute.\par
+\par
+\tab **An ELSE clause is always associated with the LAST IF STATEMENT that does not contain an else clause** ex:\par
+\par
+\tab\tab if (gameIsOver == 0)\par
+\tab\tab\tab if ( playerToMove == YOU)\par
+\tab\tab\tab\tab printf ("Your Move\\n");\par
+\tab\tab\tab else\par
+\tab\tab\tab\tab printf ("My Move\\n");\par
+\tab\tab else\par
+\tab\tab\tab printf ("The Game is Over\\n");\par
+\par
+-The proper use of indentation becomes very importatnt here to understand the logic of complex statements. Note that changing the indentation does not change the logic as interpreted by the compiler. For example:\par
+\par
+\tab if (gameIsOver == 0)\par
+\tab\tab\tab if ( playerToMove == YOU)\par
+\tab\tab\tab\tab printf ("Your Move\\n");\par
+\tab\tab\tab\tab\tab\par
+\tab else\par
+\tab\tab printf ("The Game is Over\\n");\par
+\par
+If you remove the first else statement, a compiler will not associate the else with the very first if statement: A compiler would see it as follows:\par
+\tab if (gameIsOver == 0)\par
+\tab\tab\tab if ( playerToMove == YOU)\par
+\tab\tab\tab\tab printf ("Your Move\\n");\par
+\tab\tab\tab else\par
+\tab\tab\tab\tab printf ("The Game is Over\\n");\par
+\par
+Because the else clause is associated with the last un-elsed if. You can use braces to force a different association in those cases in which the innermost if does not contain an else, but an outer if does. The braces have the effect of "closing off" the if statement. Thus:\par
+\pard\tab if ( gameIsOver == 0 ) \par
+\tab\{\par
+\tab\tab if ( playerToMove == YOU )\par
+\tab\tab printf ("Your Move\\n");\par
+\tab\}\par
+\tab else\par
+\pard\sa200\sl276\slmult1\tab\tab printf ("The game is over\\n");\par
+Would achieve the desired effect, with the message "The Game Is Over" being displayed if the value of gameIsOver is not 0.\par
+\par
+\b The \b0\i else if \b\i0 Construct\par
+\tab\b0 The else statement is good if you have a test against two possible conditions, but what if there are 3? For example, we want a program that displays -1 if a number is less than zero, 0 if the number is equal to zero, and 1 if the number is greater than zero. (This is actually an implementation of what is commonly called the SIGN FUNCTION). Obviously we need 3 tests in this case. The if else construct will not work in this case. You would have to use 3 if statements\par
+\tab -This situation can be handled by adding an if statement to your else clause. Remember that the program statement following an else clause can be any valid C program statement, so an if statement can again be used. EX:\par
+\tab if ( expression 1 )\par
+\tab\tab program statement 1\par
+\tab else\par
+\tab\tab if ( expression 2 )\par
+\tab\tab\tab program statement 2;\par
+\tab\tab else\par
+\tab\tab\tab program statement 3;\par
+-This effectively extends the if statement from a two-valued logic decision to a three-valued logic decision. You can continue to add if statements to the else clauses, in the manner just shown, to effectively extend the decision to an n-valued logic decision.\par
+\par
+\tab The preceeding construct is used so often that it is generally referred to as an else if construct and is usually formatted as follows:\par
+\par
+\tab if ( expression 1 )\par
+\tab\tab program statement 1;\par
+\tab else if (expression 2 )\par
+\tab\tab program statement 2;\par
+\tab else \par
+\tab\tab program statement 3;\par
+\par
+Either will work, but the second format improves readaibility of the statement and makes it cleaner, especially if you are using 5+ valued logic decisions you would end up indenting far to the right and it would become unreadable.\par
+\par
+Please refer to project files for 6.6 - 6.8 for further analysis of if/else if\par
+\par
+\b The \i switch\i0  Statement\par
+\b0\tab The if-else statement chain encountered in the prevous programs in which the value of a variable is successfully compared against different values - is so commonly used when developing programs that a special program statement exists in the C language for performing precisely this function. The name of the statement is the switch statement. It's general format is:\par
+\tab switch ( expression )\par
+\tab\{\par
+\tab\tab case value1:\par
+\tab\tab\tab program statement\par
+\tab\tab\tab program statement \par
+\tab\tab\tab break;\par
+\tab\par
+\tab\tab case value2:\par
+\tab\tab\tab program statement\par
+\tab\tab\tab program statement\par
+\tab\tab\tab break;\par
+\tab\tab default:\par
+\tab\tab\tab program statement\par
+\tab\tab\tab break;\par
+\tab\tab\}\par
+The expression enclosed within the parenthesis is compared against the values (value1, value2) which must be simple constants or constant expressions. If a case is found whose value is equal to the value of expression, the program statements that follow that case are executed. Note that one or more program statements do not have to be enclosed in brackets in this case.\par
+\tab The BREAK statement signals the end of a particular case and causes execution of the switch statement to be terminated. Remember to add a break statement at the end of every case. If you forget, the next case will be executed as well.\par
+\tab The special opional case called DEFAULT is executed if the value of the expression does not match any of the case values. (conceptually the same as the fall through "else". This set up literally creates an if, else if, else if,  else scenario.\par
+\par
+\b Boolean Variables\b0\par
+\tab note - a prime number is a number that is not divisible by any other integers other than 1 and itself.  How would you create a program to generate table of prime integers?\par
+\tab **See 6.10-prime_numbers.C for a thorough analysis**\par
+Boolean values can be assigned to either 0 or 1. Where 0 means FALSE and 1 means TRUE. Recall how if statements can be satisfied, if an if statement is satisfied it is effectively setting a value of 1 to return true and execute the following statement. Satisfied means nonzero and nothing more.\par
+\tab *C gives a value of 1 to a satisfied expression\par
+\tab *C gives a value of 0\par
+\par
+Flags: Flags such as the _Bool expression set up in 6.10-prime_numbers.c can be tested simply with: if ( isPrime ), since if do and else if statements are simply testing for false or true, if irPrime = 1, the if statement will execute, otherwise it will terminate.\par
+\tab To test if a flag is false, you can use if ( ! is flag) ! is known as the LOGICAL NEGATION OPERATOR. This will check for zero or false so you are checking to see if the flag returns false.\par
+\tab ! expression\par
+\tab myMove = ! myMove; \par
+\tab\tab This expression has the same precedence as the unary minus operator, which means that it has the highest precedence over all binary arithmetic operators and all relational operators. So to test if the value of a variable x is NOT less than the value of a variable y:\par
+\tab if (! (x < y)) = if x Is NOT less than y ** THE PARENTHESIS ARE NECESSARY TO ENSURE PROPER EVALUATION OF THE EXPRESSION**, although you could also just use if (x >= y)\par
+\par
+\b <stdbool.h>\par
+\tab\b0 We learned in the section on "Variables, Data types, and Arithmetic Expressions" that the special values that can be used with _Bool are the type bool, and the values true and false. To use these you need to include the header file <stdbool.h> within the program. See 6.10A-prime_numbers to see the prime number program rewritten using this header.\par
+\par
+\b The Conditional Operator\par
+\tab\b0 -Perhaps the most unusual operator in the C language.\par
+\tab -Unlike all other operators in C which are either unary or binary operators - the conditional operator is a TERNARY operator, that is, it takes three operands. The two symbols used to denote this operator are the question mark (?) and the colon (:). The first operand is placed before the ?, the second between the ? and the :, and the third after the :\par
+\tab condition ? expression1 : expression2\par
+\tab -Where condition is an expression, usually a relational expressoin, that is evaluated first whenever the conditional operator is encountered. If the result of the condition is TRUE (nonzero) then expression1 is evaluated and the result of the evaluation becomes the result of the operation. \par
+\tab -If condition evaluates to FALSE (zero) then expression2 is evaluated and it's results become the result of the operation\par
+\tab -The conditional operator is most often used to assign one of the two values to a variable depending upon some condition. Ex: suppose you have an integer variable x and another integer variable s. If you want to assign -1 to s if x were less than zero, and the value of x^2 to s otherwise, the following could be used:\par
+\tab s = ( x < 0 ) ?  -1 : x * x;\par
+\tab\tab x < 0 is first tested, if it is true s will be replaced by -1, otherwise it will be replaced by x^2.\par
+\par
+\tab Another Ex: Assign the variable maxValue to the maximum of a and b:\par
+\tab\tab maxValue = ( a > b ) ? a : b ;\par
+\tab\tab **If the condition after the colon (the "else" part) consists of another conditional operator, you can achieve the effects of an "else if" clause. \par
+\par
+Program 6.6-sign_function.c could be rewritten using the conditional operator as follows:\par
+\tab sign = ( number < 0 ) ?  -1 : (( number == 0 ) ? 0 : 1);\par
+\tab\tab -If number is less than zero, it will be multiplied by negative one, if it is not less than zero it will be tested to see if it is equal to zero, if it is sign will = 0, if it is not, sign will equal 1.\par
+\par
+Lastly, it is not necessary for the conditional operator to be used on the right-hand side of an assignment. It can be used in any situation in which an expression could be used. This means that you could display the sign of the variable number, without first assigning it to a variable, using the printf statement as shown:\par
+\par
+printf ("Sign = %i\\n", (number < 0 ) ? -1 : ( number == 0 ) ? 0 : 1 );\par
+\par
+\par
+\tab\par
+\par
+\tab\par
+\tab\fs22\par
+}
+ 
