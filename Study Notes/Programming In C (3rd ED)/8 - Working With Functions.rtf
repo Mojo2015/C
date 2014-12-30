@@ -1,0 +1,386 @@
+{\rtf1\ansi\deff3\adeflang1025
+{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset0 Liberation Serif{\*\falt Times New Roman};}{\f4\fswiss\fprq2\fcharset0 Liberation Sans{\*\falt Arial};}{\f5\fnil\fprq2\fcharset0 Droid Sans Fallback;}{\f6\fnil\fprq2\fcharset0 FreeSans;}{\f7\fswiss\fprq0\fcharset128 FreeSans;}}
+{\colortbl;\red0\green0\blue0;\red128\green128\blue128;}
+{\stylesheet{\s0\snext0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033 Normal;}
+{\s15\sbasedon0\snext16\sb240\sa120\keepn\dbch\af5\dbch\af6\afs28\loch\f4\fs28 Heading;}
+{\s16\sbasedon0\snext16\sl288\slmult1\sb0\sa140 Text Body;}
+{\s17\sbasedon16\snext17\sl288\slmult1\sb0\sa140\dbch\af7 List;}
+{\s18\sbasedon0\snext18\sb120\sa120\noline\i\dbch\af7\afs24\ai\fs24 Caption;}
+{\s19\sbasedon0\snext19\noline\dbch\af7 Index;}
+}{\info{\creatim\yr2014\mo12\dy18\hr22\min21}{\revtim\yr0\mo0\dy0\hr0\min0}{\printim\yr0\mo0\dy0\hr0\min0}{\comment LibreOffice}{\vern67241730}}\deftab709
+\viewscale100
+{\*\pgdsctbl
+{\pgdsc0\pgdscuse451\pgwsxn12240\pghsxn15840\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\pgdscnxt0 Default Style;}}
+\formshade\paperh15840\paperw12240\margl1134\margr1134\margt1134\margb1134\sectd\sbknone\sectunlocked1\pgndec\pgwsxn12240\pghsxn15840\marglsxn1134\margrsxn1134\margtsxn1134\margbsxn1134\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnrlc
+\pgndec\pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\qc{\afs80\rtlch \ltrch\loch\fs80
+Working with Functions}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\qc\afs80\rtlch \ltrch\loch\fs80
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+Functions are fundamental elements of all programs; printf and scanf are examples of functions. Int main (void) is also a function that's been used in every program to this point.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab -Program functions provide the mechanism for producing programs that are easy to write, read, understand, debug, modify, and maintain.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\afs24\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\afs24\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+Creating a function: Example:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\afs24\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+void printMessage (void) // the first void means it takes no input, second means no output}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab printf (\u8220\'93Programming is fun.\\n\u8221\'94);}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\afs24\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+This is a function that can be called and reused as many times as you like within your program.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\afs24\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+The declaration of a function can tell the compiler four things (from left to right) about the function.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\qj{\afs24\rtlch \ltrch\loch\fs24
+\tab 1. Who can call it (discussed in chapter 15)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab 2. The type of value it returns (void in the above example \u8211\'96 meaning it returns no value)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab 3. It's name (printMessage in the above example)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab 4. The argument it takes (void in the above example \u8211\'96 it takes no arguments)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\afs24\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+*Remember main is a specially recognized name in the C system that ALWAYS indicates where the program is to begin execution. You must ALWAYS have a main. To make the example above work you must also include a function main:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab #include <stdio.h>}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab void printMessage (void)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab \tab printf (\u8220\'93Programming is fun.\\n\u8221\'94);\tab }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab \}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\afs24\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab int main (void)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab \tab printMessage();}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab \tab return 0;}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab \}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\afs24\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+Output for this program would simply be: \u8220\'93Programming is fun.\u8221\'94}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab printMessage(); indicates that printMessage is to be executed, the parenthesis are used to tell the compiler that printMessage is a FUNCTION. When a function call is executed, program execution is transferred directly to the indicated function. When the printMessage function completes running,}{\afs24\rtlch \ltrch\loch\fs24
+Variables defined inside a function are known as automatic local variables becau}{\afs24\rtlch \ltrch\loch\fs24
+ the}{\afs24\rtlch \ltrch\loch\fs24
+Variables defined inside a function are known as automatic local variables becau}{\afs24\rtlch \ltrch\loch\fs24
+ program will return to main and continue where it left off.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\afs24\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\afs24\rtlch \ltrch\loch\fs24
+\tab }{\b\afs24\ab\rtlch \ltrch\loch\fs24
+Note that no return; is specified in printMessage, this is because the function has no value to return.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+\tab *Functions like printf and scanf work the same way, you didn't have to write them because they have already been created as a part of the standard C library (in stdio.h)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\afs24\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\afs24\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs30\ab\rtlch \ltrch\loch\fs30
+Arguments and Local Variables}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs30\ab\rtlch \ltrch\loch\fs30
+\tab }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs30\ab0\rtlch \ltrch\loch\fs30
+\tab }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+Arguments greatly increase the usefulness and flexibility of a function. Printf for example takes arguments every time we use it: printf(\u8220\'93%i print me, variable);}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab You can define your own functions that take arguments. }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab }{\b\afs24\ab\rtlch \ltrch\loch\fs24
+see 84-argument.c for an example}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+\tab }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+Function Prototype Declaration}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+\tab }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+The first line of the function:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab void calculateTriangularNumber (int n) is called the FUNCTION PROTOTYPE \tab \tab \tab \tab DECLARATION.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab -This tells the compiler that the function returns no value (keyword void) and that it takes a single argument (called n, which is an integer in this case). }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab -The name that is chosen for an argument is called it's FORMAL PARAMETER NAME.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab -The formal parameter name (n) can be referred to anywhere inside of the function.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+Automatic Local Variables:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+\tab }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+Variables defined inside a function are known as AUTOMATIC LOCAL VARIABLES \u8211\'96 because they are automatically \u8220\'93created\u8221\'94 each time a function is called, and because their values are local.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab **The value of a local variable }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+can only be accessed by the function in which the variable is defined. It }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+cannot be accessed by any other function. If an initial value is }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+given to a variable inside a function, that initial value is assigned to the variable EACH time the function is called.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab **When defining local variables inside a function, it is more precise in C to use the keyword auto before the definition of a variable: }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab auto int i, triangularNumber = 0;}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+\tab --}{\b\afs24\ab\rtlch \ltrch\loch\fs24
+This is seldom used since the compiler will automatically make it a local variable as is.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+Returning Function Results}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab -You may not always want the results of the function displayed. In C, you can RETURN the results of the function to the calling routine. This works just the same as the return 0; used in all prior programs. }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab Ex: \tab \tab return expression;}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab -}{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+This statement indicates that the function is to return the value of expression to the \tab \tab \tab calling routine.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab -The return statement is not enough however, when the function declaration is made, you must alto declare the TYPE OF VALUE THE FUNCTION RETURNS:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab float kmh_to_mph (float km_speed)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab -begins the definition of a function kmh_to_mph, which takes one float argument called \tab \tab \tab km_speed and which RETURNS a floating-point value}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab int gcd (int u, int v) \u8211\'96 Will return integer values, takes integer values are arguments.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab }{\b\afs24\ab\rtlch \ltrch\loch\fs24
+see programs 8.5 and 8.6 for examples}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+A C function can only return a single value in the manner just described. }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+ Unlike other languages, C makes no distinction between subroutines (procedures) and functions. There is only the function, which can optionally return a value. **IF the declaration of the type returned by the function is omitted, the compiler will assume it is an INT** \u8211\'96 This is poor programming etiquette. Be sure to always declare the type of values returned by your functions!}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+A FUNCTION DECLARED TO BE OF TYPE VOID HAS NO VALUE AND CANNOT BE USED AS IT DOES NOT HAVE A VALUE IN AN EXPRESSION \u8211\'96 IT WILL NOT RETURN OR ACCEPT INPUT (depending on where void is used)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+Declaring Return Types and Argument Types:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+\tab }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+The C Compiler assumes that a function returns a value of type int as the default case. Unless either of the following has occurred:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+1. The function has been defined in the program before the function call is encountered.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+2. The value returned by the function has been DECLARED before the function call is encountered.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+\tab }{\b\afs24\ab\rtlch \ltrch\loch\fs24
+See 8.8-sqrt.c for an example of multiple functions}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab -}{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+In the above program, the functions are defined in an order which works fine, however if the absoluteValue function was declared beneath the squareRoot function (which calls the absoluteValue function), an error would be thrown.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab -}{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+To be able to call a function BEFORE it is defined, you must declare the type of result returned by the absoluteValue function BEFORE the function is called (prototyping) \u8211\'96 the declaration can be made inside of the function calling it itself or at the very beginning of the program (outside of all functions). Ex:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+float absoluteValue (float x); // note that \u8220\'93x\u8221\'94 will be thrown away, it's just used as a dummy, all you really need is to declare the TYPE. You will set your formal parameter when you define the function.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab **}{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+Remember, if the function does not take any arguments, put void in the ()}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+Variable number of arguments:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab int printf (char *format, \u8230\'85); // tells the compiler that printf takes a character pointer as its first argument, and is followed by any number of additional arguments (\u8230\'85).}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab *}{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+You can have more than 1 return statement in a function. Whenever a return is executed, control is immediately sent back to the calling function. Whenever a return is executed, control is immediately sent back to the callinf function and any statements appearing in the function after the return are NOT EXECUTED.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab -}{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+return is ideal for a function that does not return a value }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+Square Root: The square root routine in the standard C library is sqrt \u8211\'96 it will return a domain error if a negative number is supplied.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+Top-Down Programming}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+\tab }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\u8220\'93The notion of functions that call functions that in turn call functions forms the basis for producing good, structured programs.\u8221\'94}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab Look at 88-sqrt.c, you could start by writing main and adding your calls for the square root function BEFORE actually writing the content (defining) the squareRoot function. All you have to do is specify the arguments that the function takes and the value it returns.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab Later, you will write the squareRoot function, }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+during which you will make a call to absoluteValue which you have also not defined yet but will later, }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+this is called top down programming. }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+Put easily: Top down programming = writing calls to functions you have not yet concerning yourself with the details of operation to that function, just knowing that you can develop that function and will do it later. }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+Functions and Arrays}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+\tab -As with ordinary variables and values, it is possible to pass the value of an array element and even an entire array as an argument to a function.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+Passing a single element of an array works exactly as expected (just as we are used to doing within the printf function arguments):}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab sq_root_result = squareRoot (averages[i]) // the array name is averages, element i.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+Passing an entire array function is different, to pass an entire array to a function, it is only necessary to list the name of the array WITHOUT ANY SUBSCRIPTS inside the call to the function. }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab Ex:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab gradeScores[100]; // defined array with 100 elements.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab Minimum (gradeScores) \u8211\'96 passes the entire array to a function entitled minimum.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+On the other side, minimum must be expecting an entire array to be passed as an argument and must make the appropriate formal parameter declaration. It may look as follows:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab int minimum (int values [100]) // }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+minimum will output an integer result and accept an argument \tab \tab \tab \tab \tab \tab array with 100 elements}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \{}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab \u8230\'85}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab return minValue;}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \}}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+see 89-minval.c for an example of finding the minimum value from an array}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+**NOTE** }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+\tab You do NOT have to specify the number of elements the function is expecting with the array, in fact even when you do the compiler ignores it. All you have to do is define your function set to accept an array without specifying the amount of elements and any element sized input will work.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+ARGUMENT FACT: WHEN YOU PASS AN ARRAY AS AN ARGUMENT TO A FUNCTION, THAT FUNCTIONS CALCULATIONS CAN AND WILL UPDATE THE ELEMENTS OF THE ORIGINAL ARRAY (unlike variables which are local and will not be updated). See 811-change_element.c for an example.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+\tab --This does not apply to single elements such as array[5], only entire arrays, this is because the data stored in the array is not copied into the new function, the function is accessing the same blocks of memory thus they are overwritten by the functions calculations.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+See 812-sorting.c for an example of creating your own function to sort an array from smallest to largest number, note however that c has a built in function to do this : qsort. However to use it you need to understand pointers to functions (found in chapter 11 of programming in c 3}{\super\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+rd}{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+ edition)}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b\afs24\ab\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b\afs24\ab\rtlch \ltrch\loch\fs24
+Multidimensional Arrays:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab Multidimensional array elements can be passed to a function just as any ordinary variable or single-dimensional array element can:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab squareRoot (matrix[i][j]}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+An entire multidimensional array can be passed to a function the same way a single dimension array would be passed: }
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+scalarMultiply (measured_values, constant);}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab *}{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+For single dimension arrays you can just put array[] for a variable array size, for a multidimensional array you HAVE to specify the number of columns in the array:}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+int array_values[100][50] would work}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+\tab \tab }{\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+int array_values[][50] would also work.}
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par \pard\plain \s0\nowidctlpar{\*\hyphen2\hyphlead2\hyphtrail2\hyphmax0}\cf0\kerning1\dbch\af5\langfe2052\dbch\af6\afs24\alang1081\loch\f3\fs24\lang1033\ql\b0\afs24\ab0\rtlch \ltrch\loch\fs24
+
+\par }
